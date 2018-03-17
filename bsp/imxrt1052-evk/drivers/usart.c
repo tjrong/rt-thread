@@ -18,7 +18,7 @@
 #include "fsl_lpuart.h"
 #include "fsl_iomuxc.h"
 
-#ifdef RT_USING_UART
+#ifdef RT_USING_SERIAL
 
 #if !defined(RT_USING_UART0) && !defined(RT_USING_UART1) && \
     !defined(RT_USING_UART2) && !defined(RT_USING_UART3) && \
@@ -114,7 +114,7 @@ void UART7_IRQHandler(void)
 #if defined(RT_USING_UART8)
 struct rt_serial_device serial8;
 
-void UART7_IRQHandler(void)
+void UART8_IRQHandler(void)
 {
     uart_isr(&serial8);
 }
@@ -230,10 +230,10 @@ static rt_err_t imxrt_configure(struct rt_serial_device *serial, struct serial_c
     switch (cfg->stop_bits)
     {
     case STOP_BITS_2:
-        config.stopBitCount = kLPUART_OneStopBit;
+        config.stopBitCount = kLPUART_TwoStopBit;
         break;
     default:
-        config.stopBitCount = kLPUART_TwoStopBit;
+        config.stopBitCount = kLPUART_OneStopBit;
         break;
     }
 
@@ -380,4 +380,4 @@ int imxrt_hw_usart_init(void)
 }
 INIT_BOARD_EXPORT(imxrt_hw_usart_init);
 
-#endif /*RT_USING_UART*/
+#endif /*RT_USING_SERIAL */

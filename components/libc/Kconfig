@@ -22,7 +22,17 @@ if RT_USING_LIBC && RT_USING_DFS
     config RT_USING_POSIX_TERMIOS
         bool "Enable termios feature"
         default n
+    
+    config RT_USING_POSIX_AIO
+        bool "Enable AIO"
+        default n
     endif
 endif
+
+config HAVE_SYS_SIGNALS
+    bool "Toolchains/libc has sigval/sigevent structure definitions"
+    default n
+    help
+        Toolchains/libc has sigval/sigevent/siginfo_t definitions.
 
 endmenu
