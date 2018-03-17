@@ -67,7 +67,7 @@
 
 /* SECTION: RTGUI support */
 /* using RTGUI support */
-// #define PKG_USING_GUIENGINE
+#define RT_USING_GUIENGINE
 
 /* name length of RTGUI object */
 #define RTGUI_NAME_MAX		16

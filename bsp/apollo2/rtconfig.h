@@ -138,7 +138,7 @@
 
 /* RT-Thread UI Engine */
 
-/* PKG_USING_GUIENGINE is not set */
+/* RT_USING_GUIENGINE is not set */
 
 /* VBUS(Virtual Software BUS) */
 

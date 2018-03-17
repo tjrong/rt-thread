@@ -22,8 +22,6 @@
  * 2009-05-27     Yi.qiu       The first version.
  * 2010-07-18     Bernard      add stat and statfs structure definitions.
  * 2011-05-16     Yi.qiu       Change parameter name of rename, "new" is C++ key word.
- * 2017-12-27     Bernard      Add fcntl API.
- * 2018-02-07     Bernard      Change the 3rd parameter of open/fcntl/ioctl to '...'
  */
 
 #ifndef __DFS_POSIX_H__
@@ -53,7 +51,7 @@ void rewinddir(DIR *d);
 int closedir(DIR* d);
 
 /* file api*/
-int open(const char *file, int flags, ...);
+int open(const char *file, int flags, int mode);
 int close(int d);
 #ifdef RT_USING_NEWLIB
 _READ_WRITE_RETURN_TYPE _EXFUN(read, (int __fd, void *__buf, size_t __nbyte));
@@ -68,8 +66,7 @@ int unlink(const char *pathname);
 int stat(const char *file, struct stat *buf);
 int fstat(int fildes, struct stat *buf);
 int fsync(int fildes);
-int fcntl(int fildes, int cmd, ...);
-int ioctl(int fildes, int cmd, ...);
+int ioctl(int fildes, int cmd, void *data);
 
 /* directory api*/
 int rmdir(const char *path);

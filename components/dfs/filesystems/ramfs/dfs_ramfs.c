@@ -42,7 +42,7 @@ int dfs_ramfs_mount(struct dfs_filesystem *fs,
 
     ramfs = (struct dfs_ramfs *)data;
     fs->data = ramfs;
-    
+
     return RT_EOK;
 }
 
@@ -189,11 +189,8 @@ int dfs_ramfs_open(struct dfs_fd *file)
     rt_size_t size;
     struct dfs_ramfs *ramfs;
     struct ramfs_dirent *dirent;
-    struct dfs_filesystem *fs;
 
-    fs = (struct dfs_filesystem *)file->data;
-
-    ramfs = (struct dfs_ramfs *)fs->data;
+    ramfs = (struct dfs_ramfs *)file->data;
     RT_ASSERT(ramfs != NULL);
 
     if (file->flags & O_DIRECTORY)
@@ -459,7 +456,6 @@ struct dfs_ramfs* dfs_ramfs_create(rt_uint8_t *pool, rt_size_t size)
     rt_list_init(&(ramfs->root.list));
     ramfs->root.size = 0;
     strcpy(ramfs->root.name, ".");
-    ramfs->root.fs = ramfs;
 
     return ramfs;
 }

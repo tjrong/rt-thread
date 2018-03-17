@@ -1,14 +1,7 @@
 #include <rtthread.h>
-#include <sys/socket.h>
-
-#ifdef RT_USING_DFS_NET
-#include <sys/select.h> // only dfs_net
-#include <dfs_posix.h>
-#else
-#define read        lwip_read
-#define write       lwip_write
-#endif /* RT_USING_DFS_NET */
-
+#include <sys/socket.h> 
+#include <sys/select.h>
+#include <dfs_posix.h> 
 #include "netdb.h"
 
 #define MAX_SERV                 32         /* Maximum number of chargen services. Don't need too many */
@@ -59,16 +52,16 @@ static void chargen_thread(void *arg)
 
     if (bind(listenfd, (struct sockaddr *) &chargen_saddr, sizeof(chargen_saddr)) == -1)
         LWIP_ASSERT("chargen_thread(): Socket bind failed.", 0);
-
+	
     /* Put socket into listening mode */
     if (listen(listenfd, MAX_SERV) == -1)
         LWIP_ASSERT("chargen_thread(): Listen failed.", 0);
-
+	
 
     /* Wait forever for network input: This could be connections or data */
     for (;;)
     {
-        maxfdp1 = listenfd + 1;
+        maxfdp1 = listenfd+1;
 
         /* Determine what sockets need to be in readset */
         FD_ZERO(&readset);
@@ -85,7 +78,7 @@ static void chargen_thread(void *arg)
         /* Wait for data or a new connection */
         i = select(maxfdp1, &readset, &writeset, 0, 0);
 
-        if (i == 0) continue;
+          if (i == 0) continue;
 
         /* At least one descriptor is ready */
         if (FD_ISSET(listenfd, &readset))
@@ -96,8 +89,8 @@ static void chargen_thread(void *arg)
             if (p_charcb)
             {
                 p_charcb->socket = accept(listenfd,
-                                          (struct sockaddr *) &p_charcb->cliaddr,
-                                          &p_charcb->clilen);
+                                        (struct sockaddr *) &p_charcb->cliaddr,
+                                        &p_charcb->clilen);
                 if (p_charcb->socket < 0)
                     rt_free(p_charcb);
                 else
@@ -108,8 +101,8 @@ static void chargen_thread(void *arg)
                     p_charcb->nextchar = 0x21;
                 }
             }
-            else
-            {
+			else
+			{
                 /* No memory to accept connection. Just accept and then close */
                 int sock;
                 struct sockaddr cliaddr;
@@ -120,7 +113,6 @@ static void chargen_thread(void *arg)
                     closesocket(sock);
             }
         }
-
         /* Go through list of connected clients and process data */
         for (p_charcb = charcb_list; p_charcb; p_charcb = p_charcb->next)
         {
@@ -132,19 +124,17 @@ static void chargen_thread(void *arg)
                 if (do_read(p_charcb) < 0)
                     break;
             }
-
             if (FD_ISSET(p_charcb->socket, &writeset))
             {
                 char line[80];
                 char setchar = p_charcb->nextchar;
 
-                for (i = 0; i < 59; i++)
+                for( i = 0; i < 59; i++)
                 {
                     line[i] = setchar;
                     if (++setchar == 0x7f)
                         setchar = 0x21;
                 }
-
                 line[i] = 0;
                 strcat(line, "\n\r");
                 if (write(p_charcb->socket, line, strlen(line)) < 0)
@@ -152,7 +142,6 @@ static void chargen_thread(void *arg)
                     close_chargen(p_charcb);
                     break;
                 }
-
                 if (++p_charcb->nextchar == 0x7f)
                     p_charcb->nextchar = 0x21;
             }
@@ -213,19 +202,19 @@ static int do_read(struct charcb *p_charcb)
 
 void chargen_init(void)
 {
-    rt_thread_t chargen;
+	rt_thread_t chargen;
 
-    chargen = rt_thread_create(CHARGEN_THREAD_NAME,
-                               chargen_thread, RT_NULL,
-                               CHARGEN_THREAD_STACKSIZE,
-                               CHARGEN_PRIORITY, 5);
-    if (chargen != RT_NULL) rt_thread_startup(chargen);
+	chargen = rt_thread_create(CHARGEN_THREAD_NAME,
+		chargen_thread, RT_NULL,
+		CHARGEN_THREAD_STACKSIZE,
+		CHARGEN_PRIORITY, 5);
+	if (chargen != RT_NULL) rt_thread_startup(chargen);
 }
 #ifdef RT_USING_FINSH
 #include <finsh.h>
 void chargen()
 {
-    chargen_init();
+	chargen_init();
 }
 FINSH_FUNCTION_EXPORT(chargen, start chargen server);
 #endif

@@ -480,7 +480,7 @@ void DMA1_Stream2_IRQHandler(void)
 struct stm32f4_spi stm32f4_spi4 = 
 {
     /* .spi_handle = */{
-        /* .Instance = */ SPI4,
+        /* .Instance = */ SPI5,
     },
     /* .hdma_rx = */ {   
         DMA2_Stream0,

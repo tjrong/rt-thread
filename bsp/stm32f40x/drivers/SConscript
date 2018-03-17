@@ -1,6 +1,8 @@
+Import('RTT_ROOT')
+Import('rtconfig')
 from building import *
 
-cwd = GetCurrentDir()
+cwd     = os.path.join(str(Dir('#')), 'drivers')
 
 # add the general drivers.
 src = Split("""
@@ -22,3 +24,4 @@ CPPPATH = [cwd]
 group = DefineGroup('Drivers', src, depend = [''], CPPPATH = CPPPATH)
 
 Return('group')
+

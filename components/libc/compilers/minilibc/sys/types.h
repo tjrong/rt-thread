@@ -15,8 +15,6 @@ typedef int mode_t;
 typedef unsigned long clockid_t;
 typedef int pid_t;
 
-typedef	unsigned long clock_t; /* clock() */
-
 #ifndef NULL
 #define NULL        (0)
 #endif

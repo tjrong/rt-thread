@@ -27,7 +27,7 @@ elif  CROSS_TOOL == 'msvc':
     PLATFORM  = 'cl'
     EXEC_PATH = ''
 else:
-    print("bad CROSS TOOL!")
+    print "bad CROSS TOOL!"
     exit(1)
 
 if os.getenv('RTT_EXEC_PATH'):
@@ -43,14 +43,14 @@ if PLATFORM == 'gcc':
     AS = PREFIX + 'gcc'
     AR = PREFIX + 'ar'
     LINK = PREFIX + 'gcc'
-    TARGET_EXT = 'elf'
+    TARGET_EXT = 'axf'
     SIZE = PREFIX + 'size'
     OBJDUMP = PREFIX + 'objdump'
     OBJCPY = PREFIX + 'objcopy'
 
     DEVICE = ' -ffunction-sections -fdata-sections'
     DEVICE = '  '
-    CFLAGS = DEVICE + ' -I/usr/include -w -D_REENTRANT -D_LINUX -DHAVE_SYS_SIGNALS'
+    CFLAGS = DEVICE + ' -I/usr/include -w -D_REENTRANT'
     AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp'
     #LFLAGS = DEVICE + ' -Wl,--gc-sections,-Map=rtthread-linux.map -lpthread'
     LFLAGS = DEVICE + ' -Wl,-Map=rtthread-linux.map -pthread -T gcc.ld'

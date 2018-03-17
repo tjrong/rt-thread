@@ -37,7 +37,7 @@
 
 int libc_system_init(void)
 {
-#if defined(RT_USING_DFS) & defined(RT_USING_DFS_DEVFS)
+#ifdef RT_USING_DFS
     rt_device_t dev_console;
 
     dev_console = rt_console_get_device();

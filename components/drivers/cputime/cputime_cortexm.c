@@ -30,12 +30,9 @@
 
 /* Use Cycle counter of Data Watchpoint and Trace Register for CPU time */
 
-static float cortexm_cputime_getres(void)
+static uint32_t cortexm_cputime_getres(void)
 {
-    float ret = 1000 * 1000 * 1000;
-    
-    ret = ret / SystemCoreClock;
-    return ret;
+    return (1000 * 1000 * 1000)/SystemCoreClock;
 }
 
 static uint32_t cortexm_cputime_gettime(void)

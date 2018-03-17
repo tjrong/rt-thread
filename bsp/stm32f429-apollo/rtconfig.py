@@ -36,7 +36,7 @@ if PLATFORM == 'gcc':
     AR = PREFIX + 'ar'
     CXX = PREFIX + 'g++'
     LINK = PREFIX + 'gcc'
-    TARGET_EXT = 'elf'
+    TARGET_EXT = 'axf'
     SIZE = PREFIX + 'size'
     OBJDUMP = PREFIX + 'objdump'
     OBJCPY = PREFIX + 'objcopy'

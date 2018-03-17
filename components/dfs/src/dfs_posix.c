@@ -20,7 +20,6 @@
  * Change Logs:
  * Date           Author       Notes
  * 2009-05-27     Yi.qiu       The first version
- * 2018-02-07     Bernard      Change the 3rd parameter of open/fcntl/ioctl to '...'
  */
 
 #include <dfs.h>
@@ -39,10 +38,11 @@
  *
  * @param file the path name of file.
  * @param flags the file open flags.
+ * @param mode ignored parameter
  *
  * @return the non-negative integer on successful open, others for failed.
  */
-int open(const char *file, int flags, ...)
+int open(const char *file, int flags, int mode)
 {
     int fd, result;
     struct dfs_fd *d;
@@ -428,60 +428,28 @@ RTM_EXPORT(fsync);
  * @return 0 on successful completion. Otherwise, -1 shall be returned and errno
  * set to indicate the error.
  */
-int fcntl(int fildes, int cmd, ...)
+int ioctl(int fildes, int cmd, void *data)
 {
-    int ret = -1;
+    int ret;
     struct dfs_fd *d;
 
     /* get the fd */
     d = fd_get(fildes);
-    if (d)
+    if (d == NULL)
     {
-        void* arg;
-        va_list ap;
-
-        va_start(ap, cmd);
-        arg = va_arg(ap, void*);
-        va_end(ap);
-
-        ret = dfs_file_ioctl(d, cmd, arg);
-        fd_put(d);
+        rt_set_errno(-EBADF);
+        return -1;
     }
-    else ret = -EBADF;
 
+    ret = dfs_file_ioctl(d, cmd, data);
     if (ret != 0)
     {
         rt_set_errno(ret);
         ret = -1;
     }
+    fd_put(d);
 
-    return 0;
-}
-RTM_EXPORT(fcntl);
-
-/**
- * this function is a POSIX compliant version, which shall perform a variety of
- * control functions on devices.
- *
- * @param fildes the file description
- * @param cmd the specified command
- * @param data represents the additional information that is needed by this
- * specific device to perform the requested function.
- *
- * @return 0 on successful completion. Otherwise, -1 shall be returned and errno
- * set to indicate the error.
- */
-int ioctl(int fildes, int cmd, ...)
-{
-    void* arg;
-    va_list ap;
-
-    va_start(ap, cmd);
-    arg = va_arg(ap, void*);
-    va_end(ap);
-
-    /* we use fcntl for this API. */
-    return fcntl(fildes, cmd, arg);
+    return ret;
 }
 RTM_EXPORT(ioctl);
 

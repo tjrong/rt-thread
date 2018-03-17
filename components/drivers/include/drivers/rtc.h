@@ -22,13 +22,15 @@
  * 2012-10-10     aozima       first version.
  */
 
-#ifndef __RTC_H__
-#define __RTC_H__
+#ifndef RTC_H_INCLUDED
+#define RTC_H_INCLUDED
 
-rt_err_t set_date(rt_uint32_t year, rt_uint32_t month, rt_uint32_t day);
-rt_err_t set_time(rt_uint32_t hour, rt_uint32_t minute, rt_uint32_t second);
+extern rt_err_t set_date(rt_uint32_t year,
+                         rt_uint32_t month,
+                         rt_uint32_t day);
 
-int rt_soft_rtc_init(void);
-int rt_rtc_ntp_sync_init(void);
+extern rt_err_t set_time(rt_uint32_t hour,
+                         rt_uint32_t minute,
+                         rt_uint32_t second);
 
-#endif /* __RTC_H__ */
+#endif // RTC_H_INCLUDED

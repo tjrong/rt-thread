@@ -36,9 +36,6 @@
 #endif
 
 struct rt_wlan_info info;
-static char wifi_ssid[32]    = {0};
-static char wifi_key[32]     = {0};
-static int network_mode      = WIFI_STATION;
 
 #ifndef WIFI_SETTING_FN
 #define WIFI_SETTING_FN     "/appfs/setting.json"
@@ -56,6 +53,10 @@ static int network_mode      = WIFI_STATION;
 #ifdef PKG_USING_CJSON
 #include <cJSON_util.h>
 #endif
+
+static char wifi_ssid[32]    = {0};
+static char wifi_key[32]     = {0};
+static int network_mode      = WIFI_STATION;
 
 int wifi_get_mode(void)
 {

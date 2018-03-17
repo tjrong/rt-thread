@@ -572,10 +572,9 @@ static void phy_monitor_thread_entry(void *parameter)
             
             if (link)   // link up
             {
-                PHY_GetLinkSpeedDuplex(imxrt_eth_device.enet_base, 
-                                       PHY_ADDRESS, &speed, &duplex);
+                PHY_GetLinkSpeedDuplex(imxrt_eth_device.enet_base, PHY_ADDRESS, &speed, &duplex);
                 
-                if (kPHY_Speed10M == speed)
+                if (kENET_MiiSpeed10M == speed)
                 {
                     dbg_log(DBG_LOG, "10M\n");
                 }
@@ -584,7 +583,7 @@ static void phy_monitor_thread_entry(void *parameter)
                     dbg_log(DBG_LOG, "100M\n");
                 }
                 
-                if (kPHY_HalfDuplex == duplex)
+                if (kENET_MiiHalfDuplex == duplex)
                 {
                     dbg_log(DBG_LOG, "half dumplex\n");
                 }
@@ -593,8 +592,7 @@ static void phy_monitor_thread_entry(void *parameter)
                     dbg_log(DBG_LOG, "full dumplex\n");
                 }
                 
-                if ((imxrt_eth_device.speed != (enet_mii_speed_t)speed) 
-                    || (imxrt_eth_device.duplex != (enet_mii_duplex_t)duplex))
+                if ((imxrt_eth_device.speed != speed) || (imxrt_eth_device.duplex != duplex))
                 {
                     imxrt_eth_device.speed = (enet_mii_speed_t)speed; 
                     imxrt_eth_device.duplex = (enet_mii_duplex_t)duplex;

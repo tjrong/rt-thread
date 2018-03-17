@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
 <project>
   <fileVersion>2</fileVersion>
   <configuration>
@@ -87,7 +89,7 @@
         </option>
         <option>
           <name>GHeapSize</name>
-          <state>4096</state>
+          <state>0</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -131,7 +133,7 @@
         <debug>1</debug>
         <option>
           <name>CCDefines</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -175,15 +177,15 @@
         </option>
         <option>
           <name>CCDiagRemark</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDiagWarning</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDiagError</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>IProcessor</name>
@@ -212,7 +214,7 @@
         </option>
         <option>
           <name>CCObjModuleName</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -273,7 +275,7 @@
         </option>
         <option>
           <name>PreInclude</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCEnableMisalignedData</name>
@@ -281,14 +283,13 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state />
-          <state>$PROJ_DIR$\../../libcpu/v850/70f34</state>
+          <state>$PROJ_DIR$\..\..\libcpu\v850\70f34</state>
+          <state>$PROJ_DIR$\..\..\include</state>
           <state>$PROJ_DIR$\drivers</state>
           <state>$PROJ_DIR$\.</state>
           <state>$PROJ_DIR$\applications</state>
-          <state>$PROJ_DIR$\../../include</state>
-          <state>$PROJ_DIR$\../../components/finsh</state>
-          <state>$PROJ_DIR$\../../libcpu/v850/common</state>
+          <state>$PROJ_DIR$\..\..\components\finsh</state>
+          <state>$PROJ_DIR$\..\..\libcpu\v850\common</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -304,7 +305,7 @@
         </option>
         <option>
           <name>IccExtraOptions</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCOverrideModuleTypeDefault</name>
@@ -462,15 +463,15 @@
         </option>
         <option>
           <name>AWarnOne</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AWarnRange1</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AWarnRange2</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>ADebugNew</name>
@@ -490,7 +491,7 @@
         </option>
         <option>
           <name>OAIncludePath2</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>OAStdIncCheck</name>
@@ -514,7 +515,7 @@
         </option>
         <option>
           <name>AsmExtraOptions</name>
-          <state />
+          <state></state>
         </option>
       </data>
     </settings>
@@ -522,21 +523,21 @@
       <name>CUSTOM</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <extensions />
-        <cmdline />
+        <extensions></extensions>
+        <cmdline></cmdline>
       </data>
     </settings>
     <settings>
       <name>BICOMP</name>
       <archiveVersion>0</archiveVersion>
-      <data />
+      <data/>
     </settings>
     <settings>
       <name>BUILDACTION</name>
       <archiveVersion>1</archiveVersion>
       <data>
-        <prebuild />
-        <postbuild />
+        <prebuild></prebuild>
+        <postbuild></postbuild>
       </data>
     </settings>
     <settings>
@@ -570,7 +571,7 @@
         </option>
         <option>
           <name>XDefines</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AlwaysOutput</name>
@@ -622,7 +623,7 @@
         </option>
         <option>
           <name>XclFileSlave</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>XExtraOptionsCheck</name>
@@ -630,7 +631,7 @@
         </option>
         <option>
           <name>XExtraOptions</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>DoFill</name>
@@ -672,15 +673,15 @@
         </option>
         <option>
           <name>SuppressDiags</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>TreatAsWarn</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>TreatAsErr</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>ModuleLocalSym</name>
@@ -784,19 +785,19 @@
         </option>
         <option>
           <name>RawBinaryFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinarySymbol</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinarySegment</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinaryAlign</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CrcAlign</name>
@@ -821,18 +822,18 @@
         </option>
         <option>
           <name>XARInputs</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>OutputFile</name>
-          <state />
+          <state></state>
         </option>
       </data>
     </settings>
     <settings>
       <name>BILINK</name>
       <archiveVersion>0</archiveVersion>
-      <data />
+      <data/>
     </settings>
   </configuration>
   <configuration>
@@ -887,7 +888,7 @@
         </option>
         <option>
           <name>RTDescription</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RTConfigPath</name>
@@ -909,7 +910,7 @@
         </option>
         <option>
           <name>Input description</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>Output variant</name>
@@ -918,7 +919,7 @@
         </option>
         <option>
           <name>Output description</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>GHeapSize</name>
@@ -934,7 +935,7 @@
         </option>
         <option>
           <name>GDeviceSelect</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>GeneralMisraVer</name>
@@ -1006,19 +1007,19 @@
         </option>
         <option>
           <name>CCDiagSuppress</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDiagRemark</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDiagWarning</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDiagError</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>IProcessor</name>
@@ -1047,7 +1048,7 @@
         </option>
         <option>
           <name>CCObjModuleName</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -1088,7 +1089,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCLibConfigHeader</name>
@@ -1108,7 +1109,7 @@
         </option>
         <option>
           <name>PreInclude</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCEnableMisalignedData</name>
@@ -1116,14 +1117,13 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state />
-          <state>$PROJ_DIR$\../../libcpu/v850/70f34</state>
+          <state>$PROJ_DIR$\..\..\libcpu\v850\70f34</state>
+          <state>$PROJ_DIR$\..\..\include</state>
           <state>$PROJ_DIR$\drivers</state>
           <state>$PROJ_DIR$\.</state>
           <state>$PROJ_DIR$\applications</state>
-          <state>$PROJ_DIR$\../../include</state>
-          <state>$PROJ_DIR$\../../components/finsh</state>
-          <state>$PROJ_DIR$\../../libcpu/v850/common</state>
+          <state>$PROJ_DIR$\..\..\components\finsh</state>
+          <state>$PROJ_DIR$\..\..\libcpu\v850\common</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1139,7 +1139,7 @@
         </option>
         <option>
           <name>IccExtraOptions</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CCOverrideModuleTypeDefault</name>
@@ -1296,15 +1296,15 @@
         </option>
         <option>
           <name>AWarnOne</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AWarnRange1</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AWarnRange2</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>ADebugNew</name>
@@ -1316,7 +1316,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>Multibyte</name>
@@ -1324,7 +1324,7 @@
         </option>
         <option>
           <name>OAIncludePath2</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>OAStdIncCheck</name>
@@ -1348,7 +1348,7 @@
         </option>
         <option>
           <name>AsmExtraOptions</name>
-          <state />
+          <state></state>
         </option>
       </data>
     </settings>
@@ -1356,21 +1356,21 @@
       <name>CUSTOM</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <extensions />
-        <cmdline />
+        <extensions></extensions>
+        <cmdline></cmdline>
       </data>
     </settings>
     <settings>
       <name>BICOMP</name>
       <archiveVersion>0</archiveVersion>
-      <data />
+      <data/>
     </settings>
     <settings>
       <name>BUILDACTION</name>
       <archiveVersion>1</archiveVersion>
       <data>
-        <prebuild />
-        <postbuild />
+        <prebuild></prebuild>
+        <postbuild></postbuild>
       </data>
     </settings>
     <settings>
@@ -1386,7 +1386,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1400,11 +1400,11 @@
         </option>
         <option>
           <name>SecondaryOutputFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>XDefines</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>AlwaysOutput</name>
@@ -1456,7 +1456,7 @@
         </option>
         <option>
           <name>XclFileSlave</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>XExtraOptionsCheck</name>
@@ -1464,7 +1464,7 @@
         </option>
         <option>
           <name>XExtraOptions</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>DoFill</name>
@@ -1506,15 +1506,15 @@
         </option>
         <option>
           <name>SuppressDiags</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>TreatAsWarn</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>TreatAsErr</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>ModuleLocalSym</name>
@@ -1536,7 +1536,7 @@
         </option>
         <option>
           <name>xcProgramEntryLabel</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>DebugInformation</name>
@@ -1564,7 +1564,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -1618,19 +1618,19 @@
         </option>
         <option>
           <name>RawBinaryFile</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinarySymbol</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinarySegment</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>RawBinaryAlign</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>CrcAlign</name>
@@ -1655,153 +1655,152 @@
         </option>
         <option>
           <name>XARInputs</name>
-          <state />
+          <state></state>
         </option>
         <option>
           <name>OutputFile</name>
-          <state />
+          <state></state>
         </option>
       </data>
     </settings>
     <settings>
       <name>BILINK</name>
       <archiveVersion>0</archiveVersion>
-      <data />
+      <data/>
     </settings>
   </configuration>
   <group>
-    <name>Drivers</name>
+    <name>70F34</name>
     <file>
-      <name>$PROJ_DIR$\drivers/CG_port.c</name>
+      <name>$PROJ_DIR$\..\..\libcpu\v850\70f34\context_iar.asm</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\drivers/CG_port_user.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/CG_system.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/CG_system_user.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/CG_systeminit.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/CG_timer.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/CG_timer_user.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/board.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/uart.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\drivers/cstartup.asm</name>
+      <name>$PROJ_DIR$\..\..\libcpu\v850\70f34\cpuport.c</name>
     </file>
   </group>
   <group>
     <name>Applications</name>
     <file>
-      <name>$PROJ_DIR$\applications/application.c</name>
+      <name>$PROJ_DIR$\applications\application.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\applications/startup.c</name>
-    </file>
-  </group>
-  <group>
-    <name>Kernel</name>
-    <file>
-      <name>$PROJ_DIR$\../../src/clock.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/device.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/idle.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/ipc.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/irq.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/kservice.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/mem.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/mempool.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/object.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/scheduler.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/signal.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/thread.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\../../src/timer.c</name>
+      <name>$PROJ_DIR$\applications\startup.c</name>
     </file>
   </group>
   <group>
-    <name>70F34</name>
+    <name>Drivers</name>
     <file>
-      <name>$PROJ_DIR$\../../libcpu/v850/70f34/cpuport.c</name>
+      <name>$PROJ_DIR$\drivers\board.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../libcpu/v850/70f34/context_iar.S</name>
+      <name>$PROJ_DIR$\drivers\CG_port.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_port_user.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_system.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_system_user.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_systeminit.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_timer.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\CG_timer_user.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\cstartup.asm</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\drivers\uart.c</name>
     </file>
   </group>
   <group>
     <name>finsh</name>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/shell.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\cmd.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/symbol.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_compiler.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/cmd.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_error.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_compiler.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_heap.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_error.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_init.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_heap.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_node.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_init.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_ops.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_node.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_parser.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_ops.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_token.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_parser.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_var.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_var.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\finsh_vm.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_vm.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\shell.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\../../components/finsh/finsh_token.c</name>
+      <name>$PROJ_DIR$\..\..\components\finsh\symbol.c</name>
+    </file>
+  </group>
+  <group>
+    <name>Kernel</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\clock.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\device.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\idle.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\ipc.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\irq.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\kservice.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\mem.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\mempool.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\object.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\scheduler.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\thread.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\src\timer.c</name>
     </file>
   </group>
 </project>
+
+

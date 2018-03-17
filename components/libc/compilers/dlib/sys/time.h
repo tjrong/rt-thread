@@ -20,10 +20,6 @@ struct timeval {
 };
 #endif /* _TIMEVAL_DEFINED */
 
-#if defined ( __ICCARM__ ) && (__VER__ >= 8011002)
-#define _TIMESPEC_DEFINED
-#endif
-
 #ifndef _TIMESPEC_DEFINED
 #define _TIMESPEC_DEFINED
 /*
